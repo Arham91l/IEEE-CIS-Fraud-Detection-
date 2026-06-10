@@ -3,10 +3,8 @@
 <div align="center">
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue?style=for-the-badge&logo=python)
-![Streamlit](https://img.shields.io/badge/Streamlit-1.x-FF4B4B?style=for-the-badge&logo=streamlit)
 ![XGBoost](https://img.shields.io/badge/ML-XGBoost-orange?style=for-the-badge)
 ![SHAP](https://img.shields.io/badge/Explainability-SHAP-green?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Deployed-success?style=for-the-badge)
 
 **A production-grade fraud detection pipeline on the IEEE-CIS dataset using XGBoost, SMOTE for class imbalance, and SHAP for model explainability — deployed as an interactive Streamlit dashboard.**
 • [📂 Repository Structure](#repository-structure) • [⚙️ Installation](#installation--usage) • [📊 Results](#results)
