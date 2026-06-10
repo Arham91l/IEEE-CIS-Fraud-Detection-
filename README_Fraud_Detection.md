@@ -9,8 +9,7 @@
 ![Status](https://img.shields.io/badge/Status-Deployed-success?style=for-the-badge)
 
 **A production-grade fraud detection pipeline on the IEEE-CIS dataset using XGBoost, SMOTE for class imbalance, and SHAP for model explainability — deployed as an interactive Streamlit dashboard.**
-
-[🚀 Live Demo](#live-demo) • [📂 Repository Structure](#repository-structure) • [⚙️ Installation](#installation--usage) • [📊 Results](#results)
+• [📂 Repository Structure](#repository-structure) • [⚙️ Installation](#installation--usage) • [📊 Results](#results)
 
 </div>
 
@@ -267,19 +266,6 @@ Actual  Legit  [ 113,841    512  ]
 | 9 | `addr1` | Billing region |
 | 10 | `V130` | Vesta engineered feature |
 
-### Screenshots
-
-> 📸 _Add screenshots of your Streamlit dashboard here_
-
-```
-![Dashboard Overview](docs/screenshots/dashboard_main.png)
-![ROC and PR Curves](docs/screenshots/roc_pr_curves.png)
-![SHAP Beeswarm](docs/screenshots/shap_beeswarm.png)
-![Transaction Force Plot](docs/screenshots/shap_force_plot.png)
-![Confusion Matrix](docs/screenshots/confusion_matrix.png)
-```
-
----
 
 ## ⚙️ Installation & Usage
 
@@ -350,14 +336,6 @@ streamlit run app.py
 3. **Filter**: Use the threshold slider to adjust the fraud/legitimate decision boundary
 4. **Inspect**: Click any flagged transaction to see its SHAP force plot explanation
 5. **Export**: Download the scored CSV with `fraud_probability` and `prediction` columns appended
-
----
-
-## 🚀 Live Demo
-
-> 🔗 **[Streamlit Cloud Deployment — Click Here](https://YOUR_APP_URL.streamlit.app)**
-
-A pre-scored sample of 500 transactions is loaded on startup — no upload required to explore the dashboard.
 
 ---
 
@@ -433,17 +411,6 @@ fraud-detection/
 ## 👤 Author
 
 **Arham**
-- 📧 [your.email@example.com]
-- 💼 [LinkedIn Profile]
-- 🐙 [GitHub Profile]
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
-
----
 
 <div align="center">
 ⭐ Star this repo if you found it useful!
