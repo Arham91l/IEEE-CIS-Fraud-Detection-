@@ -291,7 +291,6 @@ pip install -r requirements.txt
 
 **`requirements.txt`**
 ```
-streamlit>=1.28.0
 xgboost>=1.7.0
 scikit-learn>=1.3.0
 imbalanced-learn>=0.11.0
@@ -321,28 +320,11 @@ python src/train.py
 
 Training takes ~10–15 minutes on CPU (500 trees, 5-fold CV).
 
-### 5. Run the App
-
-```bash
-streamlit run app.py
-```
-
-### 6. Using the Dashboard
-
-1. **Upload** a transaction CSV (must match IEEE-CIS column schema, or use the provided sample)
-2. **Score**: Click "Run Fraud Detection" — predictions and fraud probabilities appear per row
-3. **Filter**: Use the threshold slider to adjust the fraud/legitimate decision boundary
-4. **Inspect**: Click any flagged transaction to see its SHAP force plot explanation
-5. **Export**: Download the scored CSV with `fraud_probability` and `prediction` columns appended
-
----
-
 ## 📁 Repository Structure
 
 ```
 fraud-detection/
 │
-├── app.py                          # Main Streamlit application
 ├── requirements.txt
 ├── README.md
 │
@@ -371,12 +353,6 @@ fraud-detection/
 │   ├── 03_Modeling.ipynb           # SMOTE, XGBoost, threshold tuning
 │   └── 04_SHAP_Analysis.ipynb      # Global + local explainability
 │
-├── docs/
-│   └── screenshots/
-│
-└── .streamlit/
-    └── config.toml
-```
 
 ---
 
@@ -391,8 +367,6 @@ fraud-detection/
 | **Feature Engineering** | pandas, scikit-learn |
 | **Evaluation** | scikit-learn metrics |
 | **Visualization** | Plotly, Matplotlib, SHAP plots |
-| **Frontend** | Streamlit |
-| **Deployment** | Streamlit Community Cloud |
 
 ---
 
