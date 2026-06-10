@@ -35,7 +35,6 @@ The final model is deployed as a Streamlit dashboard where users can upload tran
 - 📊 **SHAP Explainability** — Global feature importance (beeswarm) + per-transaction force plots
 - 🎯 **Threshold Optimization** — F1/Precision-Recall curve analysis to set the classification threshold beyond the default 0.5
 - 📈 **Full Evaluation Suite** — ROC-AUC, PR-AUC, F1, confusion matrix, and classification report
-- 🖥️ **Interactive Dashboard** — Upload CSV → get fraud scores + SHAP explanation per transaction
 - 🔍 **Transaction Inspector** — Drill into any flagged transaction to see which features drove the prediction
 
 ---
@@ -108,10 +107,7 @@ Raw IEEE-CIS Data (transaction + identity)
   │                       │  Global: beeswarm + bar plots
   │                       │  Local: force plot per transaction
   └───────────────────────┘
-              │
-              ▼
-       Streamlit Dashboard
-```
+             
 
 ### Preprocessing Strategy
 
