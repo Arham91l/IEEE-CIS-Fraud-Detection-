@@ -134,20 +134,19 @@ for col in cat_cols:
 ### Imbalance Handling — SMOTE
 
 ```python
-from imblearn.over_sampling import SMOTE
+from imblearn.over_sampling import SMOTETomek
 
-smote = SMOTE(
-    sampling_strategy=0.1,   # Upsample fraud to 10% of majority class
-    random_state=42,
-    k_neighbors=5
-)
-X_train_res, y_train_res = smote.fit_resample(X_train, y_train)
+smt = SMOTETomek(random_state=42)
+
+X_res, y_res = smt.fit_resample(X_train, y_train)
 ```
 
-**Why SMOTE over simple oversampling/undersampling?**
-- Random oversampling risks overfitting to repeated exact examples
-- Undersampling discards legitimate transaction patterns
-- SMOTE generates synthetic fraud examples in feature space, improving generalization
+**Why SMOTETomek over simple oversampling/undersampling?**
+- Random oversampling risks overfitting by duplicating minority-class examples.
+- Undersampling may remove valuable legitimate transaction patterns.
+- SMOTE generates synthetic fraud samples to improve class balance.
+- Tomek Links remove overlapping and noisy samples near class boundaries.
+- Combining SMOTE and Tomek Links creates a cleaner, more balanced dataset and often improves model generalization and classification performance.
 
 **Additional:** `scale_pos_weight = len(y_train[y_train==0]) / len(y_train[y_train==1])` applied to XGBoost to further account for imbalance in the loss function.
 
