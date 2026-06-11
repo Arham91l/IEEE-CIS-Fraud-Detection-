@@ -30,7 +30,7 @@ The final model is deployed as a Streamlit dashboard where users can upload tran
 ## ✅ Features
 
 - 🧹 **Robust Preprocessing** — Handles 433 raw features: missing value imputation, categorical encoding, and feature pruning
-- ⚖️ **SMOTE Oversampling** — Synthetic Minority Oversampling to address 3.5% fraud prevalence
+- ⚖️ **SMOTETomek Oversampling** — Synthetic Minority Oversampling to address 3.5% fraud prevalence
 - 🌲 **XGBoost Classifier** — Gradient boosted trees with hyperparameter tuning via cross-validation
 - 📊 **SHAP Explainability** — Global feature importance (beeswarm) + per-transaction force plots
 - 🎯 **Threshold Optimization** — F1/Precision-Recall curve analysis to set the classification threshold beyond the default 0.5
@@ -85,7 +85,7 @@ Raw IEEE-CIS Data (transaction + identity)
               ▼
   ┌───────────────────────┐
   │  Imbalance Handling   │  SMOTE on training set only
-  │  (SMOTE)              │  scale_pos_weight tuning
+  │  (SMOTETomek)              │  scale_pos_weight tuning
   └───────────────────────┘
               │
               ▼
@@ -131,7 +131,7 @@ for col in cat_cols:
 - Removed highly correlated feature pairs (r > 0.98) — kept 215 of 433 original features
 - Final SHAP-selected top-50 features used for production model
 
-### Imbalance Handling — SMOTE
+### Imbalance Handling — SMOTETomek
 
 ```python
 from imblearn.over_sampling import SMOTETomek
