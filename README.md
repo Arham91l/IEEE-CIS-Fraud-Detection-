@@ -316,40 +316,6 @@ python src/train.py
 
 Training takes ~10–15 minutes on CPU (500 trees, 5-fold CV).
 
-## 📁 Repository Structure
-
-```
-fraud-detection/
-│
-├── requirements.txt
-├── README.md
-│
-├── src/
-│   ├── train.py                    # Full training pipeline (entry point)
-│   ├── preprocess.py               # Merging, imputation, encoding
-│   ├── feature_engineering.py      # Velocity features, aggregations
-│   ├── sampler.py                  # SMOTE + scale_pos_weight logic
-│   ├── model.py                    # XGBoost training + CV + tuning
-│   ├── evaluate.py                 # ROC-AUC, PR-AUC, F1, threshold opt
-│   ├── explainer.py                # SHAP TreeExplainer wrapper
-│   └── predictor.py                # Inference wrapper for Streamlit
-│
-├── models/
-│   ├── xgb_fraud_model.pkl         # Trained XGBoost model
-│   └── shap_explainer.pkl          # Saved TreeExplainer
-│
-├── data/
-│   ├── train_transaction.csv       # IEEE-CIS (gitignored — download separately)
-│   ├── train_identity.csv
-│   └── sample_transactions.csv     # 500-row demo sample (included)
-│
-├── notebooks/
-│   ├── 01_EDA.ipynb                # Class distribution, missing values, correlations
-│   ├── 02_Preprocessing.ipynb      # Feature engineering decisions
-│   ├── 03_Modeling.ipynb           # SMOTE, XGBoost, threshold tuning
-│   └── 04_SHAP_Analysis.ipynb      # Global + local explainability
-│
-
 ---
 
 ## 🛠️ Tech Stack
